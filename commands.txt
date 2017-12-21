@@ -1,0 +1,2 @@
+docker build -t imagemin .
+docker run -itv $(pwd)/in/:/img/ imagemin "/img/*"
