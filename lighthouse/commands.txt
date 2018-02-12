@@ -1,0 +1,6 @@
+wget https://raw.githubusercontent.com/jfrazelle/dotfiles/master/etc/docker/seccomp/chrome.json -O ~/chrome.json
+
+docker run -itv /dev/shm/:/home/chrome/reports --security-opt seccomp=$HOME/chrome.json justinribeiro/lighthouse
+
+lighthouse --save-assets --save-artifacts  --chrome-flags="--headless --disable-gpu --no-sandbox" http://www.goldenmoustache.com
+
