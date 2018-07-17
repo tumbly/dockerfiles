@@ -11,6 +11,7 @@ RUN echo "http://dl-2.alpinelinux.org/alpine/edge/testing" >> /etc/apk/repositor
 RUN apk -U --no-cache update
 RUN apk -U --no-cache add \
     automake \
+    bash \
     git \
     alpine-sdk  \
     nasm  \
